@@ -1,9 +1,17 @@
 @import 'app/shared/styles/globelStyles.scss';
 
+/* fonts */
+@font-face {
+    font-family: 'Poppins';
+    src: url(assets/fonts/Poppins/Poppins-Regular.ttf);
+}
+
+
 /* common style */
 body{
     margin: 0;
     font-size: $fnt-size-16-default;
+    font-family: 'Poppins';
 }
 
 /* links */

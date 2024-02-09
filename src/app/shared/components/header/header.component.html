@@ -1,8 +1,8 @@
 <header>
     <img src="assets/images/logo_w_bg.png" alt="">
     <nav>
-        <a class="link navbar-link active" href="">About me <hr></a>
-        <a class="link navbar-link " href="">Skills <hr></a>
-        <a class="link navbar-link " href="">Portfolio <hr></a>
+        <a class="link navbar-link " (click)="setActiveTab('aboutMe'); $event.preventDefault()" [class.active]="activeTab == 'aboutMe'" href="">About me <hr></a>
+        <a class="link navbar-link " (click)="setActiveTab('skills'); $event.preventDefault()" [class.active]="activeTab == 'skills'" href="">Skills <hr></a>
+        <a class="link navbar-link " (click)="setActiveTab('portfolio'); $event.preventDefault()" [class.active]="activeTab == 'portfolio'" href="">Portfolio <hr></a>
     </nav>
 </header>

@@ -8,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  activeTab: string = '';
 
+  setActiveTab(tab:string){
+    this.activeTab = tab;
+  }
 }

@@ -31,6 +31,7 @@ header{
 }
 
 .navbar-link.active{
+    color: $prim-color-green;
     >hr{
         border: solid $sec-color-purple 2px;
     }
