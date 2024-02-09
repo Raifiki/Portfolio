@@ -1,0 +1,37 @@
+@import './../../styles/globelStyles.scss';
+
+header{
+    padding: $dim-large $dim-extralarge;
+    background-color: $bg-color-dark;
+    @include flex($jc: space-between);
+    > img{
+        width: 350px;
+        height: 60px;
+    }
+    > nav{
+        @include flex($g: $dim-large);
+    }
+}
+
+.navbar-link{
+    font-size: $fnt-size-23;
+    @include hoverTransition();
+    &:hover{
+        color: $prim-color-green;
+        @include hoverTransition();
+    }
+    >hr{
+        margin: 0;
+        margin-top: 5px;
+        width: 55px;
+        border: solid transparent 2px;
+        border-top-right-radius: 2px;
+        border-bottom-right-radius: 2px;
+    }
+}
+
+.navbar-link.active{
+    >hr{
+        border: solid $sec-color-purple 2px;
+    }
+}

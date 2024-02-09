@@ -1,0 +1,11 @@
+@mixin flex($fd: row,$ai: center,$jc: center,$g: 8px){
+    display: flex;
+    flex-direction: $fd;
+    align-items: $ai;
+    justify-content: $jc;
+    gap: $g;
+}
+
+@mixin hoverTransition($t: $hover-transition-time){
+    transition: all $t linear;
+}
