@@ -1,0 +1,23 @@
+@import './../../shared/styles/globelStyles.scss';
+
+.skill-wrapper{
+    @include flex($fd: column, $g: 10px);
+    width: 70px;
+    >img {
+        width: 60px;
+    }
+    >span{
+        text-align: center;
+    }
+    &:hover{
+        >img{
+            animation: hoverSkill 300ms linear infinite alternate;
+        }
+    }
+}
+
+@keyframes hoverSkill{
+    0% {transform: translate(0,0)}
+    50% {transform: translate(0,- $dim-medium)}
+    100% {transform: translate(0,- $dim-medium)}
+}

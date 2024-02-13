@@ -2,7 +2,6 @@
 
 #section-landing-page{
     @include flex($fd: column, $ai: unset);
-    background-color: $bg-color-dark;
     height: 100vh;
 }
 

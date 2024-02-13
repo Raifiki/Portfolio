@@ -1,0 +1,16 @@
+<section id="section-my-skills">
+    <div id="my-skills-skills-wrapper">
+        @for (skill of skills; track skill){
+            <app-skill 
+                [name] = "skill.name"
+                [imgPath] = "skill.urlImg"></app-skill>}
+    </div>
+    <div id="my-skills-introduction-wrapper">
+        <div id="my-skills-text-wrapper">
+            <h2>My skills</h2>
+            <span>I have gained experience in building projects with various front end technologies and concepts.</span>
+            <button class="btn prim-btn">Get in touch</button>
+        </div>
+        <div id="vertical-line"></div>
+    </div>
+</section>

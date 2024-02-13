@@ -2,9 +2,8 @@
 
 #section-about-me{
     position: relative;
-    background-color: $bg-color-dark;
-    padding-top: $dim-extralarge;
-    padding-bottom: $dim-extralarge;
+    padding-top: calc($dim-extralarge * 2);
+    padding-bottom: calc($dim-extralarge * 2);
     padding-left: $dim-hompage-side;
     @include flex($g: calc($dim-extralarge * 3));
 }
