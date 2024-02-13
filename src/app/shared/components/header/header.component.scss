@@ -1,7 +1,7 @@
 @import './../../styles/globelStyles.scss';
 
 header{
-    padding: $dim-large $dim-extralarge;
+    padding: $dim-large $dim-hompage-side;
     background-color: $bg-color-dark;
     @include flex($jc: space-between);
     > img{

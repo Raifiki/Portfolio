@@ -1,0 +1,87 @@
+@import './../shared/styles/globelStyles.scss';
+
+#section-landing-page{
+    @include flex($fd: column, $ai: unset);
+    background-color: $bg-color-dark;
+    height: 100vh;
+}
+
+#landing-page-introduction{
+    flex-grow: 2;
+    @include flex($jc: space-between);
+    margin-bottom: -100px;
+    z-index: 2;
+}
+
+
+#landing-page-wrapper-profile-img{
+    @include flex();
+    width: 600px;
+    background-image: url(./../../assets/images/profile/hero_photo_background.svg);
+    background-repeat: no-repeat;
+    background-size: 95% 130%;
+    background-position:left 0% top -10%;
+    padding: 0px $dim-hompage-side;
+    >#landing-page-profile-img{
+        max-height: calc(100vh - 300px);
+    }
+}
+
+#landing-page-wrapper-introduction-text{
+    flex-grow: 2;
+    padding-right: $dim-hompage-side;
+    margin-left: -200px;
+    @include flex($fd:column, $g: $dim-large);
+}
+
+#landing-page-wrapper-text{
+    @include flex();
+    >span{
+        font-size: $fnt-size-64;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
+    }
+    >div{
+        @include flex($fd: column, $g: 0);
+        >#landing-page-name{
+            font-size: $fnt-size-90;
+            font-weight: bold;
+            line-height: 105%;
+        }
+        >#landing-page-developer{
+            font-size: 3.6rem;
+            color: $sec-color-purple;
+            line-height: 105%;
+        }
+    }
+}
+
+
+#landing-page-footer{
+    @include flex($jc: space-between, $ai: flex-end);
+    font-size: $fnt-size-23;
+    z-index: 2;
+}
+
+#landing-page-contact{
+    @include flex($g: 42px);
+    margin-bottom: $dim-large;
+    >#vertical-line{
+        @include verticalLine($clr: $sec-color-purple,$br:right);
+    }
+}
+
+#landing-page-scroll-down-navigation{
+    @include flex($fd: column);
+    margin-right: $dim-hompage-side;
+    cursor: default;
+    >span{
+        writing-mode: vertical-lr;
+    }
+}
+
+#bg-img-transition{
+    position: absolute;
+    width: 100%;
+    top: calc(950px - (100vw * 0.3));
+}

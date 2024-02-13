@@ -9,3 +9,16 @@
 @mixin hoverTransition($t: $hover-transition-time){
     transition: all $t linear;
 }
+
+@mixin verticalLine($w: $dim-hompage-side, $clr: $prim-color-green, $br: left){
+    width: $w;
+    background-color: $clr;
+    height: 4px;
+    @if $br == left {
+        border-bottom-left-radius: 2px;
+        border-top-left-radius: 2px;
+    } @else {
+        border-bottom-right-radius: 2px;
+        border-top-right-radius: 2px;
+    } 
+}

@@ -1,0 +1,13 @@
+@import './../../styles/globelStyles.scss';
+
+.social-media-links{
+    @include flex($g: 42px);
+}
+
+.social-media-link{
+    @include flex();
+    &:hover{
+        transform: scale(1.3);
+        @include hoverTransition();
+    }
+}

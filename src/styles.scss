@@ -12,6 +12,7 @@ body{
     margin: 0;
     font-size: $fnt-size-16-default;
     font-family: 'Poppins';
+    color: $txt-color-white;
 }
 
 /* links */
@@ -22,3 +23,20 @@ body{
 }
 
 /* buttons */
+.btn{
+    cursor: pointer;
+    border: none;
+    padding: $dim-medium $dim-large;
+    border-radius: 10px;
+    color: $txt-color-white;
+    font-size: $fnt-size-23;
+}
+
+.prim-btn{
+    background-color: $prim-color-green;
+    &:hover{
+        background-color: $sec-color-purple;
+        transform: scale(1.15);
+        @include hoverTransition();
+    }
+}
