@@ -15,6 +15,11 @@ body{
     color: $txt-color-white;
 }
 
+h2{
+    margin: 0;
+    font-size: $fnt-size-90;
+}
+
 /* links */
 .link{
     text-decoration: none;

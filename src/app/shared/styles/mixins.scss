@@ -17,8 +17,8 @@
     @if $br == left {
         border-bottom-left-radius: 2px;
         border-top-left-radius: 2px;
-    } @else {
+    } @else if $br == right {
         border-bottom-right-radius: 2px;
         border-top-right-radius: 2px;
-    } 
+    }
 }
