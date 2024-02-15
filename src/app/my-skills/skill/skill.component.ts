@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Skill } from '../../shared/interfaces/interfaces';
 
 @Component({
   selector: 'app-skill',
@@ -7,7 +8,10 @@ import { Component, Input } from '@angular/core';
   templateUrl: './skill.component.html',
   styleUrl: './skill.component.scss'
 })
+
 export class SkillComponent {
-  @Input() name: string = 'Angular';
-  @Input() imgPath: string = 'assets/icons/skills/angular.svg';
+  @Input() skill: Skill = {
+  name: 'Angular',
+  imgPath: 'assets/icons/skills/angular.svg'
+  }
 }

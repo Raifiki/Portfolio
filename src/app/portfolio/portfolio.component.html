@@ -1,0 +1,17 @@
+<section id="portfolio-section">
+    <div id="portfolio-headline-wrapper">
+        <div>
+            <h2>Portfolio</h2>
+            <div id="vertical-line"></div>
+        </div>
+        <span>This page is a sample of my work - please feel free to try them out</span>
+    </div>
+    <div id="portfolio-project-list">
+        @for(project of projects; track project; let orientation = $odd){
+            <app-portfolio-project
+                [project] = 'project'
+                [imgLeft] = 'orientation'
+            ></app-portfolio-project>
+        }
+    </div>
+</section>

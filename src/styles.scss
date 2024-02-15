@@ -21,6 +21,11 @@ h2{
     font-size: $fnt-size-90;
 }
 
+h3{
+    font-size: $fnt-size-32;
+    margin: 0;
+}
+
 /* links */
 .link{
     text-decoration: none;
@@ -43,6 +48,23 @@ h2{
     &:hover{
         background-color: $sec-color-purple;
         transform: scale(1.15);
+        @include hoverTransition();
+    }
+}
+
+.sec-btn{
+    background-color: $sec-color-purple;
+    &:hover{
+        background-color: $prim-color-green;
+        @include hoverTransition();
+    }
+}
+
+.ghost-btn{
+    background-color: $bg-color-dark;
+    border: 1px solid $prim-color-green;
+    &:hover{
+        background-color: $prim-color-green;
         @include hoverTransition();
     }
 }

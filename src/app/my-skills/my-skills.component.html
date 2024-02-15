@@ -1,9 +1,7 @@
 <section id="section-my-skills">
     <div id="my-skills-skills-wrapper">
-        @for (skill of skills; track skill){
-            <app-skill 
-                [name] = "skill.name"
-                [imgPath] = "skill.urlImg"></app-skill>}
+        @for (skill of skills; track skill)
+            {<app-skill [skill] = "skill"></app-skill>}
     </div>
     <div id="my-skills-introduction-wrapper">
         <div id="my-skills-text-wrapper">

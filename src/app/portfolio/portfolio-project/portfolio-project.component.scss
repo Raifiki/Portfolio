@@ -1,0 +1,32 @@
+@import './../../shared/styles/globelStyles.scss';
+
+.portfolio-project-wrapper{
+    >img{
+        width: 620px;
+    }
+    >div{
+        @include flex($fd: column,$g: $dim-medium);
+        >.project-technologies{
+            color: $prim-color-green;
+        }
+        >div{
+            @include flex($g: 90px);
+            margin-top: $dim-medium;
+        }
+    }
+}
+
+.portfolio-project-img-left{
+    @include flex();
+    >div{
+        align-items: flex-start;
+    }
+}
+
+.portfolio-project-img-right{
+    @include flex($fd: row-reverse);
+    >div{
+        align-items: flex-end;
+        text-align: end;
+    }
+}
