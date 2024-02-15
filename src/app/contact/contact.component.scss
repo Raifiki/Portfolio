@@ -1,0 +1,44 @@
+@import './../shared/styles/globelStyles.scss';
+
+#contact-section{
+    @include flex($fd: column, $ai: flex-start);
+    padding-top: calc($dim-extralarge * 2);
+    padding-bottom: calc($dim-extralarge * 2);
+    >#contact-headline{
+        @include flex($g: 36px);
+        >#vertical-line{
+            @include verticalLine($w: $dim-extralarge, $clr: $sec-color-purple, $br: 'right');
+        }
+    }
+}
+
+#contact-content{
+    @include flex($g: calc($dim-extralarge * 3), $jc: space-between, $ai: flex-start);
+    padding: $dim-extralarge $dim-hompage-side;
+    width: 100%;
+    box-sizing: border-box;
+    >div{
+        @include flex($fd: column, $ai: flex-start, $g: $dim-medium);
+        width: 35%;
+        >h3{
+            margin-bottom: $dim-small;
+        }
+    }
+    >app-contact-form{
+        flex-grow: 2;
+    }
+}
+
+.go-up-btn{
+    width: 40px;
+    padding: 0;
+    //border: none;
+    aspect-ratio: 1;
+    @include setImgMask('./../../assets/icons/hompageNavigation/go-up-button.svg');
+    //cursor: pointer;
+    align-self: flex-end;
+    margin-right: $dim-hompage-side;
+    &:hover{
+        background-color: $prim-color-green;
+    }
+}

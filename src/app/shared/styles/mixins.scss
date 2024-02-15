@@ -22,3 +22,10 @@
         border-top-right-radius: 2px;
     }
 }
+
+@mixin setImgMask($url){
+    mask-image: url($url);
+    mask-position: 50% 50%;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+}

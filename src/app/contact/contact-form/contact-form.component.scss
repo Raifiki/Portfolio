@@ -1,0 +1,92 @@
+@import './../../shared/styles/globelStyles.scss';
+
+form{
+    @include flex($fd: column, $g: $dim-large);
+    width: 100%;
+}
+
+.form-field{
+    @include flex($fd: column, $ai: flex-start);
+    width: 100%;
+    >.form-ipt-error-text{
+        font-size: $fnt-size-14;
+        color: $error-color-red;
+    }
+}
+
+.form-input-field{
+    @include flex($ai: flex-start);
+    width: 100%;
+    border: 1px solid $sec-color-purple;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    >input, textarea{
+        flex-grow: 2;
+        box-sizing: border-box;
+        font-size: $fnt-size-16-default;
+        font-family: 'Poppins';
+        resize: none;
+    }
+    >input{
+        height: 25px;
+    }
+    >.form-ipt-validation-img{
+        width: 25px;
+        border-radius: 50%;
+        aspect-ratio: 1;
+    }
+}
+
+.form-input{
+    border: none;
+    padding: none;
+    color: $txt-color-white;
+    outline: none;
+    background-color: transparent;
+}
+
+.input-data-empty{
+    border-color: $sec-color-purple;
+    &:hover{
+        border-color: $prim-color-green;
+    }
+    &:focus-within{
+        border-color: $prim-color-green;
+        background-color: $bg-color-light;
+    }
+}
+
+.input-data-valid{
+    border-color: $prim-color-green;
+    >.form-ipt-validation-img{
+        background-color: $prim-color-green;
+        border-radius: 50%;
+        @include setImgMask('./../../../assets/icons/hompageNavigation/form-validation-correct.svg');
+    }
+    &:focus-within{
+        background-color: $bg-color-light;
+    }
+}
+
+.input-data-invalid{
+    border-color: $error-color-red;
+    >.form-ipt-validation-img{
+        background-color: $error-color-red;
+        @include setImgMask('./../../../assets/icons/hompageNavigation/form-validation-error.svg');
+    }
+    &:focus-within{
+        background-color: $bg-color-light;
+    }
+}
+
+.form-checkbox-field{
+    position: relative;
+    @include flex($ai:flex-start,$g: $dim-medium);
+    a{
+        color: $sec-color-purple;
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

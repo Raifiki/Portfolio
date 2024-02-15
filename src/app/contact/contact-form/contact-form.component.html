@@ -1,0 +1,73 @@
+<form action="">
+    <div class="form-field">
+        <div 
+        class="form-input-field" 
+        [ngClass] = "{
+            'input-data-empty': validationName=='empty',
+            'input-data-valid': validationName=='valid',
+            'input-data-invalid': validationName=='error'}">
+            <input 
+                class="form-input" 
+                type="text" 
+                name="contant-name" 
+                id="contact-form-name"
+                placeholder="Your name">
+            <div class="form-ipt-validation-img"></div>
+        </div>
+        @if(validationName == 'error'){<div class="form-ipt-error-text">Your name is required</div>}
+    </div>
+    <div class="form-field">
+        <div 
+        class="form-input-field" 
+        [ngClass] = "{
+            'input-data-empty': validationEmail=='empty',
+            'input-data-valid': validationEmail=='valid',
+            'input-data-invalid': validationEmail=='error'}">
+            <input 
+                class="form-input" 
+                type="email" 
+                name="contact-email" 
+                id="contact-form-email"
+                placeholder="Your email">
+            <div class="form-ipt-validation-img"></div>
+        </div>
+        @if(validationEmail == 'error'){<div class="form-ipt-error-text">Your email is required</div>}
+    </div>
+    <div class="form-field">
+        <div 
+        class="form-input-field" 
+        [ngClass] = "{
+            'input-data-empty': validationMsg=='empty',
+            'input-data-valid': validationMsg=='valid',
+            'input-data-invalid': validationMsg=='error'}">
+            <textarea 
+                class="form-input" 
+                name="contact-message" 
+                id="contact-form-message" 
+                placeholder="Your message"
+                cols="30" 
+                rows="8"></textarea>                
+            <div class="form-ipt-validation-img"></div>
+        </div>
+        @if(validationMsg == 'error'){<div class="form-ipt-error-text">Your message is empty</div>}
+    </div>
+    <div class="form-field">
+        <div class="form-checkbox-field">
+            <div class="custom-checkbox">
+                <input type="checkbox" name="" id="">
+            </div>
+            <div>
+                <span>I've read the </span>
+                <a class="link" href="">privacy policy</a>
+                <span> and agree to the processing of my data as outlined.</span>
+            </div>
+        </div>
+        @if(validationPP == 'error'){<div class="form-ipt-error-text">Please accept the privacy policy.</div>}
+    </div>
+    <button 
+        class="btn" 
+        [ngClass]="{
+            'prim-btn':formDataValid,
+            'btn-disabled': !formDataValid
+        }">Send message :)</button>
+</form>
