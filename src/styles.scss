@@ -100,10 +100,24 @@ h3{
         content: "";
         @extend .center-pos-absolute;
         top: 40%;
-        transform: translate(-50%,-50%) rotate(-45deg);
+        transform: translate(-50%,-50%) rotate(-45deg) scale(1);
         width: 8px;
         aspect-ratio: 2;
         border: solid $prim-color-green;
         border-width: 0 0 2px 2px;
+        opacity: 1;
+        transition: all $hover-transition-time ease-in-out;
+    }
+    &:has(input:not(:checked))::before{
+        content: "";
+        @extend .center-pos-absolute;
+        top: 40%;
+        transform: translate(-50%,-50%) rotate(-45deg) scale(0);
+        width: 8px;
+        aspect-ratio: 2;
+        border: solid $prim-color-green;
+        border-width: 0 0 2px 2px;
+        opacity: 0;
+        transition: all $hover-transition-time ease-in-out;
     }
 }

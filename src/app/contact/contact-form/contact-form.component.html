@@ -1,60 +1,76 @@
-<form action="">
+<form (ngSubmit)="submitForm(contactForm)" #contactForm="ngForm">
     <div class="form-field">
         <div 
         class="form-input-field" 
         [ngClass] = "{
-            'input-data-empty': validationName=='empty',
-            'input-data-valid': validationName=='valid',
-            'input-data-invalid': validationName=='error'}">
+            'input-data-empty': formName.untouched,
+            'input-data-valid': formName.touched && formName.valid,
+            'input-data-invalid': formName.touched && formName.invalid}">
             <input 
                 class="form-input" 
                 type="text" 
-                name="contant-name" 
+                name="name" 
                 id="contact-form-name"
-                placeholder="Your name">
+                placeholder="Your name"
+                [(ngModel)] = "formData.name"
+                #formName="ngModel"
+                required>
             <div class="form-ipt-validation-img"></div>
         </div>
-        @if(validationName == 'error'){<div class="form-ipt-error-text">Your name is required</div>}
+        @if(formName.touched && formName.invalid){<div class="form-ipt-error-text">Your name is required</div>}
     </div>
     <div class="form-field">
         <div 
         class="form-input-field" 
         [ngClass] = "{
-            'input-data-empty': validationEmail=='empty',
-            'input-data-valid': validationEmail=='valid',
-            'input-data-invalid': validationEmail=='error'}">
+            'input-data-empty': formEmail.untouched,
+            'input-data-valid': formEmail.touched && formEmail.valid,
+            'input-data-invalid': formEmail.touched && formEmail.invalid}">
             <input 
                 class="form-input" 
                 type="email" 
-                name="contact-email" 
+                name="email" 
                 id="contact-form-email"
-                placeholder="Your email">
+                placeholder="Your email"
+                pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
+                [(ngModel)] = "formData.email"
+                #formEmail="ngModel"
+                required>
             <div class="form-ipt-validation-img"></div>
         </div>
-        @if(validationEmail == 'error'){<div class="form-ipt-error-text">Your email is required</div>}
+        @if(formEmail.touched && formEmail.invalid){<div class="form-ipt-error-text">Your email is required</div>}
     </div>
     <div class="form-field">
         <div 
         class="form-input-field" 
         [ngClass] = "{
-            'input-data-empty': validationMsg=='empty',
-            'input-data-valid': validationMsg=='valid',
-            'input-data-invalid': validationMsg=='error'}">
+            'input-data-empty': formMsg.untouched,
+            'input-data-valid': formMsg.touched && formMsg.valid,
+            'input-data-invalid': formMsg.touched && formMsg.invalid}">
             <textarea 
                 class="form-input" 
-                name="contact-message" 
+                name="message" 
                 id="contact-form-message" 
                 placeholder="Your message"
                 cols="30" 
-                rows="8"></textarea>                
+                rows="8"
+                [(ngModel)] = "formData.message"
+                #formMsg="ngModel"
+                required></textarea>                
             <div class="form-ipt-validation-img"></div>
         </div>
-        @if(validationMsg == 'error'){<div class="form-ipt-error-text">Your message is empty</div>}
+        @if(formMsg.touched && formMsg.invalid){<div class="form-ipt-error-text">Your message is empty</div>}
     </div>
     <div class="form-field">
         <div class="form-checkbox-field">
             <div class="custom-checkbox">
-                <input type="checkbox" name="" id="">
+                <input 
+                    type="checkbox" 
+                    name="privacypolicy" 
+                    id=""
+                    [(ngModel)] = "formData.privacypolicy"
+                    #formPrivacyPolicy="ngModel"
+                    required>
             </div>
             <div>
                 <span>I've read the </span>
@@ -62,12 +78,23 @@
                 <span> and agree to the processing of my data as outlined.</span>
             </div>
         </div>
-        @if(validationPP == 'error'){<div class="form-ipt-error-text">Please accept the privacy policy.</div>}
+        @if(formPrivacyPolicy.touched && formPrivacyPolicy.invalid){<div class="form-ipt-error-text">Please accept the privacy policy.</div>}
     </div>
-    <button 
+    <button
+        id="submitBtn"
+        type="submit" 
         class="btn" 
         [ngClass]="{
-            'prim-btn':formDataValid,
-            'btn-disabled': !formDataValid
-        }">Send message :)</button>
+            'prim-btn': contactForm.valid,
+            'btn-disabled': contactForm.invalid
+        }">
+        @if(playSendEmailAnimation){
+            <div id="sendAnimation">
+                <span>Thank you!</span>
+                <img src="assets/icons/hompageNavigation/mail.svg" alt="email">
+                <div></div>
+            </div>
+        }
+        <span>Send message :)</span>
+    </button>
 </form>

@@ -32,13 +32,12 @@
 .go-up-btn{
     width: 40px;
     padding: 0;
-    //border: none;
     aspect-ratio: 1;
     @include setImgMask('./../../assets/icons/hompageNavigation/go-up-button.svg');
-    //cursor: pointer;
     align-self: flex-end;
     margin-right: $dim-hompage-side;
     &:hover{
         background-color: $prim-color-green;
+        @include hoverTransition();
     }
 }

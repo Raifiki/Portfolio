@@ -1,0 +1,30 @@
+@import './../../styles/globelStyles.scss';
+
+footer{
+    @include flex($jc: space-between);
+    padding: $dim-extralarge $dim-hompage-side;
+    border-top: 2px solid $prim-color-green;
+    >div{
+        @include flex($fd: column, $ai: flex-start);
+        .logo{
+            width: 350px;
+            height: 60px;
+        }
+        .impressum{
+            >hr{
+                margin: 0;
+                width: 55px;
+                border: solid transparent 1px;
+                border-top-right-radius: 2px;
+                border-bottom-right-radius: 2px;
+            }
+            &:hover > hr{
+                border-color: $acc-color-lightblue;
+                @include hoverTransition();
+            }
+        }
+    }
+    >span{
+        font-size: $fnt-size-23;
+    }
+}
