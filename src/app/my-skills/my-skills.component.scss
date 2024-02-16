@@ -1,6 +1,7 @@
 @import './../shared/styles/globelStyles.scss';
 
 #section-my-skills{
+    position: relative;
     @include flex($g: $dim-extralarge, $jc: space-between);
     padding-left: $dim-hompage-side;
     padding-top: calc($dim-extralarge * 2);
@@ -28,8 +29,17 @@
     >span{
         text-align: right;
     }
-    >button{
+    >a {
         align-self: center;
         margin-top: $dim-large;
     }
+}
+
+#bg-img-green-1{
+    position: absolute;
+    top: 27%;
+    left: -650px;
+    transform: rotate(180deg) scaleX(-1);
+    width: 1000px;
+    z-index: 0;
 }

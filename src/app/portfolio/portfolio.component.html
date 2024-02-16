@@ -7,11 +7,13 @@
         <span>This page is a sample of my work - please feel free to try them out</span>
     </div>
     <div id="portfolio-project-list">
-        @for(project of projects; track project; let orientation = $odd){
+        @for(project of projects; track project; let orientation = $even){
             <app-portfolio-project
                 [project] = 'project'
                 [imgLeft] = 'orientation'
             ></app-portfolio-project>
         }
     </div>
+    <img id="bg-img-purple-2" src="assets/images/background/bg_img_purple_2.svg" alt="">
+    <img id="bg-img-green-1" src="assets/images/background/bg_img_green_1.svg" alt="">
 </section>

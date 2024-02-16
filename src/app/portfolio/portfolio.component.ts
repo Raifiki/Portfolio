@@ -21,7 +21,9 @@ export class PortfolioComponent {
           'CSS',
           'Api'
         ],
-        description:  'Based on the PokéAPI a simple library that provides and catalogues pokemon information.'
+        description:  'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+        urlGit: '',
+        urlDemo: ''
       },
       {
         name: 'Join',
@@ -31,7 +33,9 @@ export class PortfolioComponent {
           'HTML',
           'CSS'
         ],
-        description:  'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. '
+        description:  'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+        urlGit: 'https://github.com/Raifiki/Join_Portfolio',
+        urlDemo: ''
       },
       {
         name: 'Sharkie',
@@ -42,7 +46,9 @@ export class PortfolioComponent {
           'CSS',
           'JS OOP'
         ],
-        description:  'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.'
+        description:  'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+        urlGit: 'https://github.com/Raifiki/gameSharky',
+        urlDemo: ''
       },
       {
         name: 'Ring of Fire',
@@ -54,7 +60,9 @@ export class PortfolioComponent {
           'CSS',
           'Firebase'
         ],
-        description:  'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.'
+        description:  'A simple Jump-and-Run game based on an object-oriented approach. Help sharkie to find coins and poison bottles to fight against the killer whale.',
+        urlGit: '',
+        urlDemo: ''
       }
   ]
 }

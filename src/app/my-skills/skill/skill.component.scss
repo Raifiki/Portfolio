@@ -1,8 +1,10 @@
 @import './../../shared/styles/globelStyles.scss';
 
 .skill-wrapper{
+    position: relative;
     @include flex($fd: column, $g: 10px);
     width: 70px;
+    z-index: 2;
     >img {
         width: 60px;
     }

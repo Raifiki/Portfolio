@@ -6,6 +6,9 @@
     src: url(assets/fonts/Poppins/Poppins-Regular.ttf);
 }
 
+*{
+    scroll-behavior: smooth;
+}
 
 /* common style */
 body{
@@ -14,6 +17,7 @@ body{
     font-family: 'Poppins';
     color: $txt-color-white;
     background-color: $bg-color-dark;
+    overflow-x: hidden;
 }
 
 h2{

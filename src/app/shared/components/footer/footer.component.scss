@@ -1,6 +1,9 @@
 @import './../../styles/globelStyles.scss';
 
 footer{
+    position: relative;
+    z-index: 2;
+    background-color: $bg-color-dark;
     @include flex($jc: space-between);
     padding: $dim-extralarge $dim-hompage-side;
     border-top: 2px solid $prim-color-green;

@@ -8,4 +8,6 @@ export interface PortfolioProject{
   imgPath: string;
   technologies: string[];
   description: string;
+  urlGit: string;
+  urlDemo: string;
 }

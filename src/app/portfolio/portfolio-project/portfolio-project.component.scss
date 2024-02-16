@@ -1,6 +1,8 @@
 @import './../../shared/styles/globelStyles.scss';
 
 .portfolio-project-wrapper{
+    position: relative;
+    z-index: 2;
     >img{
         width: 620px;
     }
