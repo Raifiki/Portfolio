@@ -21,7 +21,6 @@
     @include flex($g: calc($dim-extralarge * 3), $jc: space-between, $ai: flex-start);
     padding: $dim-extralarge $dim-hompage-side;
     width: 100%;
-    box-sizing: border-box;
     >div{
         @include flex($fd: column, $ai: flex-start, $g: $dim-medium);
         width: 35%;

@@ -2,8 +2,8 @@
 
 header{
     padding: $dim-large $dim-hompage-side;
-    background-color: $bg-color-dark;
     @include flex($jc: space-between);
+    width: min(100vw,$dim-max-content-size);
     >a img{
         width: 350px;
         height: 60px;

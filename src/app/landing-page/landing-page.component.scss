@@ -3,13 +3,13 @@
 #section-landing-page{
     @include flex($fd: column, $ai: unset);
     height: 100vh;
+    position: relative;
 }
 
 #landing-page-introduction{
     flex-grow: 2;
     @include flex($jc: space-between);
     margin-bottom: -100px;
-    z-index: 2;
 }
 
 
@@ -23,14 +23,17 @@
     padding: 0px $dim-hompage-side;
     >#landing-page-profile-img{
         max-height: calc(100vh - 300px);
+        z-index: 2;
     }
 }
+
 
 #landing-page-wrapper-introduction-text{
     flex-grow: 2;
     padding-right: $dim-hompage-side;
     margin-left: -200px;
     @include flex($fd:column, $g: $dim-large);
+    z-index: 2;
 }
 
 #landing-page-wrapper-text{
@@ -81,9 +84,9 @@
 
 #bg-img-transition{
     position: absolute;
-    width: 100%;
-    top: calc(950px - (100vw * 0.3));
-    z-index: 0;
+    width: min(100vw, $dim-max-content-size);
+    top: calc(((100vh - 64px) + min(100vh - 300px, 703px)) / 2 - min(30.5vw, 0.305 * $dim-max-content-size)); // 703px = original img width, 30vw set testing
+    z-index:0;
 }
 
 #bg-img-purple-1{

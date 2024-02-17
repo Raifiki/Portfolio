@@ -19,11 +19,9 @@ form{
     width: 100%;
     border: 1px solid $sec-color-purple;
     padding: 15px 25px;
-    box-sizing: border-box;
     border-radius: 10px;
     >input, textarea{
         flex-grow: 2;
-        box-sizing: border-box;
         font-size: $fnt-size-16-default;
         font-family: 'Poppins';
         resize: none;
@@ -103,7 +101,6 @@ form{
         width: 100%;
         height: 100%;
         transform: scale(1.15);
-        box-sizing: border-box;
         background-color: $prim-color-green;
         border-radius: 10px;
         >img{

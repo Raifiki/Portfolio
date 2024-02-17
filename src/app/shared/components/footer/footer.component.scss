@@ -7,6 +7,7 @@ footer{
     @include flex($jc: space-between);
     padding: $dim-extralarge $dim-hompage-side;
     border-top: 2px solid $prim-color-green;
+    width: min(100vw,$dim-max-content-size);
     >div{
         @include flex($fd: column, $ai: flex-start);
         .logo{

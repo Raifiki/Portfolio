@@ -1,6 +1,25 @@
+@import 'shared/styles/globelStyles.scss';
+
+
 app-header{
-    z-index: 10;
     position: fixed;
+    top: 0;
+    left: 0;
+    @include flex();
     width: 100%;
-    top: 0px;
+    background-color: $bg-color-dark;
+    z-index: 10;
+}
+
+app-footer{
+    position: absolute;
+    left: 0;
+    @include flex();
+    background-color: $bg-color-dark;
+    background-color: $bg-color-dark;
+    width: 100vw;
+}
+
+div{
+    width: min(100vw,$dim-max-content-size);
 }
