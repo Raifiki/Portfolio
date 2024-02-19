@@ -1,15 +1,25 @@
 @import './../shared/styles/globelStyles.scss';
 
 #section-landing-page{
-    @include flex($fd: column, $ai: unset);
+    @include flex($fd: column, $ai: unset, $g:0);
     height: 100vh;
+    padding: 130px $dim-hompage-side 0 $dim-hompage-side;
+    box-sizing: border-box;
     position: relative;
+
+    @media (max-width: 1000px) {
+        padding: 130px $dim-large 0 $dim-large;
+        gap: $dim-extralarge;
+    }
 }
 
 #landing-page-introduction{
     flex-grow: 2;
     @include flex($jc: space-between);
-    margin-bottom: -100px;
+
+    @media (max-width: 1000px){
+        @include flex($fd: column, $jc: center, $g: $dim-large);
+    }
 }
 
 
@@ -18,22 +28,24 @@
     width: 600px;
     background-image: url(./../../assets/images/profile/hero_photo_background.svg);
     background-repeat: no-repeat;
-    background-size: 95% 130%;
-    background-position:left 0% top -10%;
-    padding: 0px $dim-hompage-side;
+    background-size: 100% 100%;
+    background-position:left 50% top 50%;
+    background-size: contain;
     >#landing-page-profile-img{
-        max-height: calc(100vh - 300px);
+        max-width: 90%;
+        max-height: calc((100vh - 300px) * 0.9);
         z-index: 2;
     }
 }
 
 
 #landing-page-wrapper-introduction-text{
-    flex-grow: 2;
-    padding-right: $dim-hompage-side;
-    margin-left: -200px;
+    margin-left: -150px;
     @include flex($fd:column, $g: $dim-large);
     z-index: 2;
+    @media (max-width: 1000px){
+        margin-left: 0;
+    }
 }
 
 #landing-page-wrapper-text{
@@ -68,14 +80,17 @@
 #landing-page-contact{
     @include flex($g: 42px);
     margin-bottom: $dim-large;
+    margin-left: -$dim-hompage-side;
     >#vertical-line{
         @include verticalLine($clr: $sec-color-purple,$br:right);
+    }
+    @media (max-width: 1000px) {
+        margin-left: -$dim-large;
     }
 }
 
 #landing-page-scroll-down-navigation{
     @include flex($fd: column);
-    margin-right: $dim-hompage-side;
     cursor: default;
     >span{
         writing-mode: vertical-lr;
@@ -85,7 +100,8 @@
 #bg-img-transition{
     position: absolute;
     width: min(100vw, $dim-max-content-size);
-    top: calc(((100vh - 64px) + min(100vh - 300px, 703px)) / 2 - min(30.5vw, 0.305 * $dim-max-content-size)); // 703px = original img width, 30vw set testing
+    top: calc(130px + (100vh - 160px - 130px - (min(589px, (100vh - 300px) * 0.9))) / 2 + min(589px, (100vh - 300px) * 0.9)  - min(30.5vw, 0.305 * $dim-max-content-size));
+    left: 0;
     z-index:0;
 }
 

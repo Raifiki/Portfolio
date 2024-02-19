@@ -6,6 +6,11 @@
     padding-bottom: calc($dim-extralarge * 2);
     padding-left: $dim-hompage-side;
     @include flex($g: calc($dim-extralarge * 3));
+
+    @media (max-width:1000px){
+        padding-left: $dim-large;
+        padding-right: $dim-large;
+    }
 }
 
 #about-me-text-wrapper{

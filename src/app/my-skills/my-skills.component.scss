@@ -6,12 +6,24 @@
     padding-left: $dim-hompage-side;
     padding-top: calc($dim-extralarge * 2);
     padding-bottom: calc($dim-extralarge * 2);
+
+    > a{
+        margin-top: $dim-large;
+    }
+
+    @media (max-width:1000px){
+        flex-direction: column-reverse;
+        padding-left: $dim-large;
+    }
 }
 
 #my-skills-skills-wrapper{
     @include flex($g:54px 123px, $jc: flex-start);
     flex-wrap: wrap;
     flex-grow: 2;
+    @media (max-width:1000px) {
+        justify-content: center;
+    }
 }
 
 #my-skills-introduction-wrapper{
@@ -21,6 +33,9 @@
         @include verticalLine($clr: $sec-color-purple);
         align-self: flex-start;
         margin-top: $dim-extralarge;
+    }
+    @media (max-width:1000px){
+        width: unset;
     }
 }
 

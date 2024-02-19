@@ -1,4 +1,7 @@
 <section id="section-my-skills">
+    <a href="#contact-section" class="hide-Desktop">
+        <button class="btn prim-btn">Get in touch</button>
+    </a>
     <div id="my-skills-skills-wrapper">
         @for (skill of skills; track skill)
             {<app-skill [skill] = "skill"></app-skill>}
@@ -7,7 +10,7 @@
         <div id="my-skills-text-wrapper">
             <h2>My skills</h2>
             <span>I have gained experience in building projects with various front end technologies and concepts.</span>
-            <a href="#contact-section">
+            <a href="#contact-section" class="hide-mobile">
                 <button class="btn prim-btn">Get in touch</button>
             </a>
         </div>
