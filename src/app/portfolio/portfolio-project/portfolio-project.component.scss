@@ -4,16 +4,22 @@
     position: relative;
     z-index: 2;
     >img{
-        width: 620px;
+        max-width: min(100%,620px);
     }
     >div{
         @include flex($fd: column,$g: $dim-medium);
+        >h3{
+            color: $sec-color-purple;
+        }
         >.project-technologies{
             color: $prim-color-green;
         }
         >div{
             @include flex($g: 90px);
             margin-top: $dim-medium;
+        }
+        @media (max-width: 1000px){
+            align-items: center !important;
         }
     }
 }
@@ -23,6 +29,10 @@
     >div{
         align-items: flex-start;
     }
+    @media (max-width: 1000px){
+        flex-direction: column;
+        text-align: center !important;
+    }
 }
 
 .portfolio-project-img-right{
@@ -30,5 +40,9 @@
     >div{
         align-items: flex-end;
         text-align: end;
+    }
+    @media (max-width: 1000px){
+        flex-direction: column;
+        text-align: center !important;
     }
 }
