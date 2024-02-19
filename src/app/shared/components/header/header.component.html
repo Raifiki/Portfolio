@@ -2,9 +2,22 @@
     <a href="#section-landing-page" (click)="setActiveTab('')">
         <img src="assets/images/logo_w_bg.png" alt="">
     </a>
-    <nav>
+    <nav class="hide-mobile">
         <a class="link navbar-link " (click)="setActiveTab('aboutMe')" [class.active]="activeTab == 'aboutMe'" href="#section-about-me">About me <hr></a>
         <a class="link navbar-link " (click)="setActiveTab('skills')" [class.active]="activeTab == 'skills'" href="#section-my-skills">Skills <hr></a>
         <a class="link navbar-link " (click)="setActiveTab('portfolio')" [class.active]="activeTab == 'portfolio'" href="#portfolio-section">Portfolio <hr></a>
     </nav>
+    @switch(mobileMenuState){
+        @case('hide'){<img class="hide-desktop" (click)="mobileMenu('show')" src="assets/icons/hompageNavigation/burger-menu.svg" alt="burger-menu">}
+        @case('show'){<img class="hide-desktop" (click)="mobileMenu('hide')" src="assets/icons/hompageNavigation/cross.svg" alt="burger-menu">}
+        @case('transition'){<img class="hide-desktop" src="assets/icons/hompageNavigation/burger-menu-transition.svg" alt="burger-menu">}
+    }
 </header>
+<div class="hide-desktop" id="menu-overlay-mobile" [ngClass]="{'show-mobile-menu': mobileMenuState == 'transition' || mobileMenuState == 'show'}">
+    <div>
+        <a class="link navbar-link-mobile" (click)="mobileMenu('hide')" [class.active]="activeTab == 'aboutMe'" href="#section-about-me">About me <hr></a>
+        <a class="link navbar-link-mobile" (click)="mobileMenu('hide')" [class.active]="activeTab == 'skills'" href="#section-my-skills">Skills <hr></a>
+        <a class="link navbar-link-mobile" (click)="mobileMenu('hide')" [class.active]="activeTab == 'portfolio'" href="#portfolio-section">Portfolio <hr></a>
+        <a class="link navbar-link-mobile" (click)="mobileMenu('hide')" [class.active]="activeTab == 'contact'" href="#contact-section">Contact <hr></a>
+    </div>
+</div>

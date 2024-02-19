@@ -52,7 +52,7 @@ form{
     }
     &:focus-within{
         border-color: $prim-color-green;
-        background-color: $bg-color-light;
+        background-color: $disabled-color-grey;
     }
 }
 
@@ -64,7 +64,7 @@ form{
         @include setImgMask('./../../../assets/icons/hompageNavigation/form-validation-correct.svg');
     }
     &:focus-within{
-        background-color: $bg-color-light;
+        background-color: $disabled-color-grey;
     }
 }
 
@@ -75,7 +75,7 @@ form{
         @include setImgMask('./../../../assets/icons/hompageNavigation/form-validation-error.svg');
     }
     &:focus-within{
-        background-color: $bg-color-light;
+        background-color: $disabled-color-grey;
     }
 }
 
@@ -123,8 +123,14 @@ form{
 }
 
 @keyframes sendEmailAnimationIcon{
-    0% {left:-155px}
-    100% {left: 0}
+    0% {
+        left:-155px; 
+        transform: rotate(0deg); 
+    }
+    100% {
+        left: 0;
+        transform: rotate(360deg);
+    }
 }
 @keyframes sendEmailAnimationBox{
     0% {left:19%; width:80%}

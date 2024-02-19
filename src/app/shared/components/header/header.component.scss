@@ -11,6 +11,14 @@ header{
     > nav{
         @include flex($g: $dim-large);
     }
+
+    @media (max-width: 1000px){
+        padding: $dim-large $dim-large;
+    }
+
+    > img{
+        cursor: pointer;
+    }
 }
 
 .navbar-link{
@@ -34,5 +42,39 @@ header{
     color: $prim-color-green;
     >hr{
         border: solid $sec-color-purple 2px;
+    }
+}
+
+.navbar-link-mobile{
+    @extend .navbar-link;
+    &:active{
+        color: $prim-color-green;
+        > hr{
+            border: solid $sec-color-purple 2px;
+        }
+    }
+}
+
+#menu-overlay-mobile{
+    position: absolute;
+    left: 100%;
+    top: 130px;
+    @include flex();
+    width: 100%;
+    height: calc(100vh - 130px);
+    background-color: $bg-color-light;
+    >div{
+        position: relative;
+        left: 70%;
+        @include hoverTransition();
+        @include flex($fd: column, $g: $dim-large, $ai: flex-start)
+    }
+}
+
+.show-mobile-menu{
+    left: 0 !important;
+    >div{
+        left: 0% !important;
+        @include hoverTransition();
     }
 }
