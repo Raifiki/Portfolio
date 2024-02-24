@@ -1,14 +1,14 @@
 <div class="portfolio-project-wrapper" [ngClass]="{'portfolio-project-img-left': imgLeft,'portfolio-project-img-right': !imgLeft}">
     <img src="{{ project.imgPath }}" alt="project-image">
     <div>
-        <h3>{{ project.name }}</h3>
-        <span class="project-technologies">
+        <h3 class="text-align">{{ project.name }}</h3>
+        <span class="project-technologies text-align">
             @for (technology of project.technologies; track technology; let last = $last){
                 {{ technology }} 
                 @if (!last) {|} 
             }
         </span>
-        <span>{{ project.description }}</span>
+        <span class="text-align">{{ project.description }}</span>
         <div>
             <a href="{{ project.urlDemo }}" target="_blank"><button class="btn sec-btn">Live test</button></a>
             <a href="{{ project.urlGit }}" target="_blank"><button class="btn ghost-btn">Github</button></a>

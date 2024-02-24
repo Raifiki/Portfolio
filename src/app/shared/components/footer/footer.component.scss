@@ -18,9 +18,17 @@ footer{
     >span{
         font-size: $fnt-size-23;
     }
-    @media (max-width:1000px){
+    @media (max-width:1250px){
         flex-direction: column;
-        gap: $dim-large
+        gap: $dim-large;
+        padding: $dim-extralarge $dim-extralarge;
+    }
+
+    @media (max-width:700px){
+        padding: $dim-extralarge $dim-large;
+        >div .logo{
+            width: 250px;
+        }
     }
 }
 

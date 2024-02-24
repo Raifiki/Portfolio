@@ -7,12 +7,18 @@ header{
     >a img{
         width: 350px;
         height: 60px;
+        @media (max-width: 700px){
+            width: 250px;
+        }
     }
     > nav{
         @include flex($g: $dim-large);
     }
 
-    @media (max-width: 1000px){
+    @media (max-width: 1250px){
+        padding: $dim-large $dim-extralarge;
+    }
+    @media (max-width: 700px){
         padding: $dim-large $dim-large;
     }
 

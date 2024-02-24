@@ -17,9 +17,13 @@
         >div{
             @include flex($g: 90px);
             margin-top: $dim-medium;
+            @media (max-width: 700px){
+                gap: $dim-large;
+            }
         }
-        @media (max-width: 1000px){
+        @media (max-width: 1250px){
             align-items: center !important;
+            max-width: 620px;
         }
     }
 }
@@ -29,7 +33,7 @@
     >div{
         align-items: flex-start;
     }
-    @media (max-width: 1000px){
+    @media (max-width: 1250px){
         flex-direction: column;
         text-align: center !important;
     }
@@ -41,8 +45,10 @@
         align-items: flex-end;
         text-align: end;
     }
-    @media (max-width: 1000px){
+    @media (max-width: 1250px){
         flex-direction: column;
-        text-align: center !important;
+        >div .text-align {
+            text-align: center !important;
+        }
     }
 }

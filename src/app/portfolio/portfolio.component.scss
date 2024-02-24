@@ -5,10 +5,13 @@
     @include flex($fd: column,$g: $dim-extralarge);
     padding-left: $dim-hompage-side;
     padding-right: $dim-hompage-side;
-    padding-top: calc($dim-extralarge * 2);
-    padding-bottom: calc($dim-extralarge * 2);
+    margin-top: $dim-section-distance;
 
-    @media (max-width:1000px){
+    @media (max-width:1250px){
+        padding-left: $dim-extralarge;
+        padding-right: $dim-extralarge;
+    }
+    @media (max-width:700px){
         padding-left: $dim-large;
         padding-right: $dim-large;
     }
@@ -25,7 +28,8 @@
             z-index: 2;
             background-color: $bg-color-dark;
             padding: $dim-medium $dim-extralarge;
-            @media (max-width: 1000px){
+
+            @media (max-width: 1400px){
                 padding: $dim-medium $dim-medium;
             }
         }
@@ -35,7 +39,11 @@
             right: -$dim-hompage-side;
             @include verticalLine($w: 85%, $clr: $sec-color-purple);
             
-            @media (max-width){
+            @media (max-width:1250px){
+                right: -$dim-extralarge;
+                width: 90%;
+            }
+            @media (max-width:700px){
                 right: -$dim-large;
             }
         }

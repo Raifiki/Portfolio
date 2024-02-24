@@ -2,12 +2,19 @@
 
 #section-about-me{
     position: relative;
-    padding-top: calc($dim-extralarge * 2);
-    padding-bottom: calc($dim-extralarge * 2);
+    margin-top: $dim-section-distance;
     padding-left: $dim-hompage-side;
     @include flex($g: calc($dim-extralarge * 3));
 
-    @media (max-width:1000px){
+    @media (max-width: 1400px) {
+        gap: calc($dim-extralarge * 2)
+    }
+
+    @media (max-width: 1250px){
+        padding-left: $dim-extralarge;
+        padding-right: $dim-extralarge;
+    }
+    @media (max-width: 700){
         padding-left: $dim-large;
         padding-right: $dim-large;
     }
@@ -27,12 +34,19 @@
             @include hoverTransition();
         }
     }
+    @media (max-width: 700px){
+        gap: $dim-medium;
+        padding-left: 0 !important;
+    }
 }
 
 #about-me-profile-image-wrapper{
     @include flex($g:0);
     >#vertical-line{
         @include verticalLine($w: 200px, $br: unset);
+        @media (max-width: 1400px){
+            width: 100px;
+        }
     }
 }
 
@@ -41,4 +55,7 @@
     aspect-ratio: 1;
     border: 4px solid $prim-color-green;
     border-radius: 50%;
+    @media (max-width: 1400px){
+        width: 350px;
+    }
 }

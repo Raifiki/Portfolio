@@ -7,7 +7,11 @@
     box-sizing: border-box;
     position: relative;
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1250px) {
+        padding: 130px $dim-extralarge 0 $dim-extralarge;
+        gap: $dim-extralarge;
+    }
+    @media (max-width: 700px) {
         padding: 130px $dim-large 0 $dim-large;
         gap: $dim-extralarge;
     }
@@ -17,8 +21,8 @@
     flex-grow: 2;
     @include flex($jc: space-between);
 
-    @media (max-width: 1000px){
-        @include flex($fd: column, $jc: center, $g: $dim-large);
+    @media (max-width: 1250px){
+        @include flex($fd: column, $jc: space-evenly, $g: $dim-large);
     }
 }
 
@@ -36,6 +40,9 @@
         max-height: calc((100vh - 300px) * 0.9);
         z-index: 2;
     }
+    @media (max-width:1250px){
+        width: 450px;
+    }
 }
 
 
@@ -43,7 +50,7 @@
     margin-left: -150px;
     @include flex($fd:column, $g: $dim-large);
     z-index: 2;
-    @media (max-width: 1000px){
+    @media (max-width: 1250px){
         margin-left: 0;
     }
 }
@@ -54,6 +61,12 @@
         font-size: $fnt-size-64;
         writing-mode: vertical-lr;
         transform: rotate(180deg);
+        @media (max-width:1400px){
+            font-size: 3rem;
+        }
+        @media (max-width:700px){
+            font-size: 1.6rem;
+        }
     }
     >div{
         @include flex($fd: column, $g: 0);
@@ -67,6 +80,26 @@
             color: $sec-color-purple;
             line-height: 105%;
         }
+
+        @media (max-width:1400px){
+            >#landing-page-name{
+                font-size: 4.5rem;
+            }
+            >#landing-page-developer{
+                font-size: 2.9rem;
+            }
+        }
+        @media (max-width:700px){
+            >#landing-page-name{
+                font-size: 2.5rem;
+            }
+            >#landing-page-developer{
+                font-size: 1.6rem;
+            }
+        }
+    }
+    @media (max-width:1400px){
+        gap: 0;
     }
 }
 
@@ -84,8 +117,8 @@
     >#vertical-line{
         @include verticalLine($clr: $sec-color-purple,$br:right);
     }
-    @media (max-width: 1000px) {
-        margin-left: -$dim-large;
+    @media (max-width: 1250px) {
+        margin-left: -$dim-extralarge;
     }
 }
 
@@ -100,9 +133,12 @@
 #bg-img-transition{
     position: absolute;
     width: min(100vw, $dim-max-content-size);
-    top: calc(130px + (100vh - 160px - 130px - (min(589px, (100vh - 300px) * 0.9))) / 2 + min(589px, (100vh - 300px) * 0.9)  - min(30.5vw, 0.305 * $dim-max-content-size));
+    top: calc(700px * (100vh / 1000px) - 0.3 * min(100vw, $dim-max-content-size) );
     left: 0;
     z-index:0;
+    @media (max-width:1250px) {
+        top: calc(550px * (100vh / 1000px) - 0.3 * 100vw );
+    }
 }
 
 #bg-img-purple-1{
