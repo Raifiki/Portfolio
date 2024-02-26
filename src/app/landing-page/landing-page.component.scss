@@ -42,6 +42,9 @@
     }
     @media (max-width:1250px){
         width: 450px;
+        >#landing-page-profile-img{
+            max-height: calc((100vh - 500px) * 0.9);
+        }
     }
 }
 
