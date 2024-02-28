@@ -22,6 +22,5 @@ export class HeaderComponent {
   mobileMenu(state: 'show' | 'hide' | 'transition'){
     this.mobileMenuState = 'transition';
     setTimeout(()=>this.mobileMenuState = state,150);
-    console.log(this.router.url);
   }
 }
