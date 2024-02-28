@@ -1,4 +1,4 @@
-@import './../../shared/styles/globelStyles.scss';
+@import './../../../shared/styles/globelStyles.scss';
 
 form{
     @include flex($fd: column, $g: $dim-large);
@@ -61,7 +61,7 @@ form{
     >.form-ipt-validation-img{
         background-color: $prim-color-green;
         border-radius: 50%;
-        @include setImgMask('./../../../assets/icons/hompageNavigation/form-validation-correct.svg');
+        @include setImgMask('./../../../../assets/icons/hompageNavigation/form-validation-correct.svg');
     }
     &:focus-within{
         background-color: $disabled-color-grey;
@@ -72,7 +72,7 @@ form{
     border-color: $error-color-red;
     >.form-ipt-validation-img{
         background-color: $error-color-red;
-        @include setImgMask('./../../../assets/icons/hompageNavigation/form-validation-error.svg');
+        @include setImgMask('./../../../../assets/icons/hompageNavigation/form-validation-error.svg');
     }
     &:focus-within{
         background-color: $disabled-color-grey;

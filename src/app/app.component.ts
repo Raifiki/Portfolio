@@ -2,12 +2,8 @@ import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
-import { LandingPageComponent } from './landing-page/landing-page.component';
-import { AboutMeComponent } from './about-me/about-me.component';
-import { MySkillsComponent } from './my-skills/my-skills.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './shared/components/footer/footer.component'; 
+import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
 
 @Component({
   selector: 'app-root',
@@ -16,12 +12,8 @@ import { FooterComponent } from './shared/components/footer/footer.component';
     CommonModule,
     RouterOutlet,
     HeaderComponent,
-    LandingPageComponent,
-    AboutMeComponent,
-    MySkillsComponent,
-    PortfolioComponent,
-    ContactComponent,
-    FooterComponent
+    FooterComponent,
+    PortfolioPageComponent
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'

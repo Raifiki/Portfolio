@@ -25,6 +25,7 @@ app-footer{
 
 }
 
-div{
+app-portfolio-page{
+    @include flex($fd: column);
     width: min(100vw,$dim-max-content-size);
 }

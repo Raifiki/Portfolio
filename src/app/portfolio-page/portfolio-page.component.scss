@@ -1,0 +1,14 @@
+@import '../shared/styles/globelStyles.scss';
+
+.wrapper-portfolio-page{
+    @include flex($fd: column);
+    width: min(100vw,$dim-max-content-size);
+}
+
+app-landing-page,
+app-about-me,
+app-my-skills,
+app-portfolio,
+app-contact{
+    width: 100%;
+}

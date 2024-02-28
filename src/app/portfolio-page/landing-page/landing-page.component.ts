@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SocialMediaAccountsComponent } from '../shared/components/social-media-accounts/social-media-accounts.component';
+import { SocialMediaAccountsComponent } from '../../shared/components/social-media-accounts/social-media-accounts.component';
 
 @Component({
   selector: 'app-landing-page',

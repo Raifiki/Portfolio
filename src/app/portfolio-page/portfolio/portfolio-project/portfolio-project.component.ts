@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { PortfolioProject } from '../../shared/interfaces/interfaces';
+import { PortfolioProject } from '../../../shared/interfaces/interfaces';
 import { CommonModule } from '@angular/common';
 
 @Component({

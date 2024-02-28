@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Skill } from '../../shared/interfaces/interfaces';
+import { Skill } from '../../../shared/interfaces/interfaces';
 
 @Component({
   selector: 'app-skill',

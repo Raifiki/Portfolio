@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { SkillComponent } from './skill/skill.component';
-import { Skill } from '../shared/interfaces/interfaces';
+import { Skill } from '../../shared/interfaces/interfaces';
 
 
 @Component({

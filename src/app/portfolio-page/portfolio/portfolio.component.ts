@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { PortfolioProjectComponent } from './portfolio-project/portfolio-project.component';
-import { PortfolioProject } from '../shared/interfaces/interfaces';
+import { PortfolioProject } from '../../shared/interfaces/interfaces';
 
 @Component({
   selector: 'app-portfolio',
