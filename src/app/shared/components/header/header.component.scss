@@ -84,3 +84,7 @@ header{
         @include hoverTransition();
     }
 }
+
+.hide-imprint{
+    display: none !important;
+}

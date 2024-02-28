@@ -4,7 +4,6 @@
     @include flex($fd: column, $ai: unset, $g:0);
     height: 100vh;
     padding: 130px $dim-hompage-side 0 $dim-hompage-side;
-    box-sizing: border-box;
     position: relative;
 
     @media (max-width: 1250px) {

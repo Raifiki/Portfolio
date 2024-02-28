@@ -1,0 +1,51 @@
+@import '../shared/styles/globelStyles.scss';
+
+#section-impressum{
+    @include flex($fd: column, $g: $dim-large);
+    min-height: calc(100vh - 235px);
+    padding: 130px $dim-hompage-side $dim-extralarge $dim-hompage-side;
+    width: min(100vw, $dim-max-content-size);
+    >#impressum-HL{
+        @include flex($jc:space-between);
+        width: 100%;
+    }
+
+    @media (max-width: 1250px) {
+        padding: 130px $dim-extralarge $dim-extralarge $dim-extralarge;
+        min-height: calc(100vh - 385px);
+    }
+    @media (max-width: 700px) {
+        padding: 130px $dim-large $dim-extralarge $dim-large;
+    }
+}
+
+.go-back-btn{
+    width: 40px;
+    padding: 0;
+    aspect-ratio: 1;
+    @include setImgMask('./../../assets/icons/hompageNavigation/go-up-button.svg');
+    transform: rotate(-90deg);
+    &:hover{
+        background-color: $prim-color-green;
+        @include hoverTransition();
+    }
+}
+
+#impressum-content{
+    @include flex($fd:column, $ai:flex-start);
+    width: 100%;
+    >h3{
+        margin-bottom: $dim-large;
+        @media (max-width: 700px) {
+            font-size: $fnt-size-23;
+        }
+    }
+    >#impressum-adresse{
+        @include flex($fd:column, $ai:flex-start);
+        margin-bottom: $dim-large;
+    }
+    >.impressum-contact-element{
+        @include flex( $jc:flex-start);
+    }
+}
+

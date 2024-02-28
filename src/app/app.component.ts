@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterOutlet } from '@angular/router';
+import { RouterModule, RouterOutlet } from '@angular/router';
 import { HeaderComponent } from './shared/components/header/header.component';
 import { FooterComponent } from './shared/components/footer/footer.component'; 
 import { PortfolioPageComponent } from './portfolio-page/portfolio-page.component';
@@ -11,6 +11,7 @@ import { PortfolioPageComponent } from './portfolio-page/portfolio-page.componen
   imports: [
     CommonModule,
     RouterOutlet,
+    RouterModule,
     HeaderComponent,
     FooterComponent,
     PortfolioPageComponent
