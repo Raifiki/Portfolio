@@ -120,6 +120,15 @@ h3{
     cursor: default;
 }
 
+.text-btn{
+    background-color: transparent;
+    padding: 0;
+    font-size: $fnt-size-16-default;
+    &:hover{
+        color: $sec-color-purple;
+    }
+}
+
 
 
 // customize checkbox

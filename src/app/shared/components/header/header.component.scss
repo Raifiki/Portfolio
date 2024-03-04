@@ -88,3 +88,8 @@ header{
 .hide-imprint{
     display: none !important;
 }
+
+.btn-group-language{
+    @include flex();
+    margin-bottom: 5px;
+}

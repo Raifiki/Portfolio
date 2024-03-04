@@ -107,6 +107,7 @@
 
 
 #landing-page-footer{
+    position: relative;
     @include flex($jc: space-between, $ai: flex-end);
     font-size: $fnt-size-23;
     z-index: 2;
@@ -125,11 +126,22 @@
 }
 
 #landing-page-scroll-down-navigation{
+    position: absolute;
+    right: 0;
+    bottom: 0;
     @include flex($fd: column);
     cursor: default;
     >span{
         writing-mode: vertical-lr;
     }
+    animation: scroll-down 3s ease-in-out infinite;
+}
+
+@keyframes scroll-down {
+    0%{bottom: 0}; 
+    10%{bottom: 20px}; 
+    20%{bottom: 20px};
+    30%{bottom: 0}; 
 }
 
 #bg-img-transition{

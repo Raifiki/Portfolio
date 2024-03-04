@@ -11,7 +11,7 @@
                 type="text" 
                 name="name" 
                 id="contact-form-name"
-                placeholder="Your name"
+                placeholder="{{sectionText.form.name}}"
                 [(ngModel)] = "formData.name"
                 #formName="ngModel"
                 required>
@@ -31,7 +31,7 @@
                 type="email" 
                 name="email" 
                 id="contact-form-email"
-                placeholder="Your email"
+                placeholder="{{sectionText.form.email}}"
                 pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
                 [(ngModel)] = "formData.email"
                 #formEmail="ngModel"
@@ -51,7 +51,7 @@
                 class="form-input" 
                 name="message" 
                 id="contact-form-message" 
-                placeholder="Your message"
+                placeholder="{{sectionText.form.message}}"
                 cols="30" 
                 rows="8"
                 [(ngModel)] = "formData.message"
@@ -73,9 +73,9 @@
                     required>
             </div>
             <div>
-                <span>I've read the </span>
-                <a class="link" href="">privacy policy</a>
-                <span> and agree to the processing of my data as outlined.</span>
+                <span>{{sectionText.form.privacyPolicy1}} </span>
+                <a class="link" href="">{{sectionText.form.privacyPolicy2}}</a>
+                <span> {{sectionText.form.privacyPolicy3}}</span>
             </div>
         </div>
         @if(formPrivacyPolicy.touched && formPrivacyPolicy.invalid){<div class="form-ipt-error-text">Please accept the privacy policy.</div>}
@@ -90,11 +90,11 @@
         }">
         @if(playSendEmailAnimation){
             <div id="sendAnimation">
-                <span>Thank you!</span>
+                <span>{{sectionText.form.thankYou}}</span>
                 <img src="assets/icons/socialMedia/eMail_logo.svg" alt="email">
                 <div></div>
             </div>
         }
-        <span>Send message :)</span>
+        <span>{{sectionText.form.send}}</span>
     </button>
 </form>

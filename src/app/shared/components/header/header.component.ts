@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
+
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -10,10 +12,24 @@ import { Router } from '@angular/router';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
+  languageService = inject(LanguageService);
+
   activeTab: string = '';
   mobileMenuState: 'show' | 'hide' | 'transition' = 'hide';
 
-  constructor(public router: Router){}
+  sectionText = {
+    aboutMe: 'about me',
+    skills: 'skills',
+    portfolio: 'portfolio',
+    contact: 'contact'
+  };
+
+
+  constructor(public router: Router){ }
+
+  ngOnInit(){
+    this.languageService.pageText.subscribe((text:any) => {this.sectionText = text.header;})
+  }
 
   setActiveTab(tab:string){
     this.activeTab = tab;

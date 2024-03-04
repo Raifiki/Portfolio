@@ -1,7 +1,7 @@
 <section id="section-my-skills">
     <div class="offset" id="anchor-my-skills"></div>
     <a href="#anchor-contact" class="hide-desktop">
-        <button class="btn prim-btn">Get in touch</button>
+        <button class="btn prim-btn">{{ sectionText.contact }}</button>
     </a>
     <div id="my-skills-skills-wrapper">
         @for (skill of skills; track skill)
@@ -9,10 +9,10 @@
     </div>
     <div id="my-skills-introduction-wrapper">
         <div id="my-skills-text-wrapper">
-            <h2>My skills</h2>
-            <span>I have gained experience in building projects with various front end technologies and concepts.</span>
+            <h2>{{ sectionText.HL }}</h2>
+            <span>{{ sectionText.description }}</span>
             <a href="#anchor-contact" class="hide-mobile">
-                <button class="btn prim-btn">Get in touch</button>
+                <button class="btn prim-btn">{{ sectionText.contact }}</button>
             </a>
         </div>
         <div id="vertical-line"></div>

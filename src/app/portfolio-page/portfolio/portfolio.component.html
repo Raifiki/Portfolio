@@ -2,10 +2,10 @@
     <div class="offset" id="anchor-portfolio"></div>
     <div id="portfolio-headline-wrapper">
         <div>
-            <h2>Portfolio</h2>
+            <h2>{{ sectionText.HL }}</h2>
             <div id="vertical-line"></div>
         </div>
-        <span>This page is a sample of my work - please feel free to try them out</span>
+        <span>{{ sectionText.description }}</span>
     </div>
     <div id="portfolio-project-list">
         @for(project of projects; track project; let orientation = $even){
