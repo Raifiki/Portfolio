@@ -39,6 +39,19 @@ export const PROJECTS_ENG: PortfolioProject[] = [
       urlGit: 'https://github.com/Raifiki/gameSharky',
       urlDemo: 'https://leonard-weiss.developerakademie.net/Projekte/M11_Sharkie/index.html'
     },
+    {
+      name: 'DABubble',
+      imgPath: 'assets/images/projects/DABubble_Vorlage_Laptop.png',
+      technologies: [
+        'Angular',
+        'TypeScript',
+        'SCSS',
+        'Firebase'
+      ],
+      description:  'A messaging app inspired by Discord. Send and receive messages and files between users, or connect with multiple users in channels. Reply directly to a message within a thread.',
+      urlGit: 'https://github.com/Raifiki/DABubble',
+      urlDemo: 'https://leonard-weiss.developerakademie.net/angular-projects/dabubble/index.html'
+    },
 ]
 
 export const PROJECTS_DE: PortfolioProject[] = [
@@ -79,5 +92,18 @@ export const PROJECTS_DE: PortfolioProject[] = [
       description:  'Ein einfaches Jump-and-Run Spiel basierend auf der Objektorientierten Programmierung. Hilf Sharkie Münzen und Giftflaschen zu finden um gegen den Killerwaal zu kämpfen.',
       urlGit: 'https://github.com/Raifiki/gameSharky',
       urlDemo: 'https://leonard-weiss.developerakademie.net/Projekte/M11_Sharkie/index.html'
+    },
+    {
+      name: 'DABubble',
+      imgPath: 'assets/images/projects/DABubble_Vorlage_Laptop.png',
+      technologies: [
+        'Angular',
+        'TypeScript',
+        'SCSS',
+        'Firebase'
+      ],
+      description:  'Eine Messenger App bassierend auf Discord. Empfangen und senden von Nachrichten und Dateien zwischen Nutzern oder vernetze dich mit mehreren Nutzern in Channels. Anworte direkt auf eine Nachricht innerhalb eines Threads.',
+      urlGit: 'https://github.com/Raifiki/DABubble',
+      urlDemo: 'https://leonard-weiss.developerakademie.net/angular-projects/dabubble/index.html'
     },
 ]
