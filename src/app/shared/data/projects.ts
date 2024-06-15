@@ -2,19 +2,6 @@ import { PortfolioProject } from "../interfaces/interfaces";
 
 export const PROJECTS_ENG: PortfolioProject[] = [
     {
-      name: 'Pokedex',
-      imgPath: 'assets/images/projects/Pokedex_Vorlage_Laptop.png',
-      technologies: [
-        'Javascript',
-        'HTML',
-        'CSS',
-        'Api'
-      ],
-      description:  'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
-      urlGit: 'https://github.com/Raifiki/Pokedex',
-      urlDemo: 'https://leonard-weiss.developerakademie.net/Projekte/M09_Pokedex/index.html'
-    },
-    {
       name: 'Join',
       imgPath: 'assets/images/projects/Join_Vorlage_Laptop.png',
       technologies: [
@@ -56,19 +43,6 @@ export const PROJECTS_ENG: PortfolioProject[] = [
 
 export const PROJECTS_DE: PortfolioProject[] = [
     {
-      name: 'Pokedex',
-      imgPath: 'assets/images/projects/Pokedex_Vorlage_Laptop.png',
-      technologies: [
-        'Javascript',
-        'HTML',
-        'CSS',
-        'Api'
-      ],
-      description:  'Eine Auflistung von Pokemon und ihren Informationen basierend auf der PokéAPI.',
-      urlGit: 'https://github.com/Raifiki/Pokedex',
-      urlDemo: 'https://leonard-weiss.developerakademie.net/Projekte/M09_Pokedex/index.html'
-    },
-    {
       name: 'Join',
       imgPath: 'assets/images/projects/Join_Vorlage_Laptop.png',
       technologies: [
@@ -107,3 +81,31 @@ export const PROJECTS_DE: PortfolioProject[] = [
       urlDemo: 'https://leonard-weiss.developerakademie.net/angular-projects/dabubble/index.html'
     },
 ]
+
+/*    {
+      name: 'Pokedex',
+      imgPath: 'assets/images/projects/Pokedex_Vorlage_Laptop.png',
+      technologies: [
+        'Javascript',
+        'HTML',
+        'CSS',
+        'Api'
+      ],
+      description:  'Based on the PokéAPI a simple library that provides and catalogues pokemon information.',
+      urlGit: 'https://github.com/Raifiki/Pokedex',
+      urlDemo: 'https://leonard-weiss.developerakademie.net/Projekte/M09_Pokedex/index.html'
+    },
+        {
+      name: 'Pokedex',
+      imgPath: 'assets/images/projects/Pokedex_Vorlage_Laptop.png',
+      technologies: [
+        'Javascript',
+        'HTML',
+        'CSS',
+        'Api'
+      ],
+      description:  'Eine Auflistung von Pokemon und ihren Informationen basierend auf der PokéAPI.',
+      urlGit: 'https://github.com/Raifiki/Pokedex',
+      urlDemo: 'https://leonard-weiss.developerakademie.net/Projekte/M09_Pokedex/index.html'
+    },
+    */
