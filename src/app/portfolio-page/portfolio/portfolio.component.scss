@@ -60,6 +60,13 @@
     left: -150px;
     width: 800px;
     z-index: 0;
+
+    @media (max-width: 1250px){        
+        top: 35%;
+    }
+    @media (max-width: 700px){        
+        top: 25%;
+    }
 }
 
 #bg-img-green-1{
