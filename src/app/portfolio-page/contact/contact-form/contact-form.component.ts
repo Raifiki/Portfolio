@@ -42,11 +42,11 @@ export class ContactFormComponent {
     privacypolicy: false
   }
 
-  mailTest = true;
+  mailTest = false;
   playSendEmailAnimation:boolean = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://leonard-weiss.com/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
       headers: {
@@ -61,12 +61,13 @@ export class ContactFormComponent {
   }
 
   submitForm(form: NgForm){
+    this.playSendEmailAnimation = true;
     if (form.submitted && form.form.valid && !this.mailTest) {
       this.http.post(this.post.endPoint, this.post.body(this.formData))
         .subscribe({
           next: (response) => {
-
             form.resetForm();
+            setTimeout(() => {this.playSendEmailAnimation = false;},5000);
           },
           error: (error) => {
             console.error(error);
@@ -74,7 +75,6 @@ export class ContactFormComponent {
           complete: () => console.info('send post complete'),
         });
     } else if (form.submitted && form.form.valid && this.mailTest) {
-      this.playSendEmailAnimation = true;
       form.resetForm();
       setTimeout(() => {this.playSendEmailAnimation = false;},5000);
     }
